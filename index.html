@@ -21,7 +21,7 @@
     <h1 class="h3 mb-3 fw-normal text-center">Conversor de Moeda</h1>
 
     <div class="form-floating">
-      <input type="number" class="form-control" id="real">
+      <input type="number" class="form-control" id="libra">
       <label>Libra</label>
     </div>
     <br>
@@ -36,12 +36,12 @@
     </div>
     <br>
     <div class="form-floating">
-      <input type="number" class="form-control" id="libra">
+      <input type="number" class="form-control" id="real">
       <label>Reais</label>
     </div>
     <br>
 
-    <button class="w-100 btn btn-lg btn-primary" onclick="convmoeda()" id="converter">Converter</button>
+    <button class="w-100 btn btn-lg btn-primary" id="converter" type="button" onclick="convmoeda()">Converter</button>
     
   </form>
 </main>
@@ -50,10 +50,11 @@
 
 <script>
 	function convmoeda(real,dolar,euro,libra){
-	
-     document.getElementById("libra").innerHTML = "4127457";
+        var lr = libra * real;
+        document.getElementById("libra").style.color = "red";
+        document.getElementById("dolar").innerHTML = lr 
+
     }
-	
 </script>
 
 
